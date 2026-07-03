@@ -1,0 +1,18 @@
+{
+	"name": "uioption",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Inject design variants and inspect UI components on local dev pages — built for AI-assisted coding workflows",
+	"author": "Muhammed Kılıç",
+	"scripts": {
+		"lint": "biome lint .",
+		"format": "biome format --write .",
+		"check": "biome check --write .",
+		"icons": "bun scripts/render-icons.js",
+		"package": "rm -rf dist && mkdir dist && VERSION=$(bun -p \"require('./src/manifest.json').version\") && cd src && zip -q -r \"../dist/uioption-v$VERSION.zip\" . -x '.*' && echo \"dist/uioption-v$VERSION.zip hazır\""
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.2",
+		"@resvg/resvg-js": "^2.6.2"
+	}
+}

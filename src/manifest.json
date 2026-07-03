@@ -1,0 +1,28 @@
+{
+	"manifest_version": 3,
+	"name": "uioption",
+	"version": "1.0.0",
+	"description": "Inject design variants and inspect UI components on local dev pages — built for AI-assisted coding workflows",
+	"author": "Muhammed Kılıç",
+	"permissions": ["scripting", "storage", "tabs"],
+	"host_permissions": [
+		"http://localhost/*",
+		"http://localhost:*/*",
+		"http://127.0.0.1/*",
+		"http://127.0.0.1:*/*",
+		"file:///*"
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"icons": {
+		"128": "icons/icon@0.5x.png"
+	},
+	"action": {
+		"default_popup": "popup/popup.html",
+		"default_title": "uioption",
+		"default_icon": {
+			"128": "icons/icon@0.5x.png"
+		}
+	}
+}
